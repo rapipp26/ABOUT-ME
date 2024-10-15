@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url("wallhaven-5g9rl7.png");
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-size: 2rem;
+}
+
+.logo{
+    font-size: 3rem;
+    color: cornflowerblue;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8 rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover/*,
+nav a.active*/ {
+    color: cornflowerblue;
+    border-bottom: 3px solid cornflowerblue;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top: 0;
+        display: none;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(11, 97, 28);
+        border-bottom: 3px solid rgb(11, 97, 28);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: rgba(80, 227, 119, 0.659);
+        border-top: 0.1rem solid rgba(80, 227, 119, 0.659);
+    }
+
+    /*nav.active{
+        display: block;
+    }*/
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover/*,
+    nav a.active*/{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(11, 97, 28);
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: rgb(80, 227, 119, 0.659);
+    background-image: url("wallhaven-5g9rl7.png");
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: white;
+}
+
+span{
+    /*color:rgb(11, 97, 28);*/
+    color: cornflowerblue;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.home-content p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.smk{
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.smk:hover{
+    color: cornflowerblue;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.home-content p a{
+    text-decoration: none;
+}
+
+.home-img{
+    border-radius: 100%;
+}
+
+.home-img img{
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+    background-color: cornflowerblue;
+    box-shadow: 0 0 25px cornflowerblue;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid cornflowerblue;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: cornflowerblue;
+}
+
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background-color: cornflowerblue;
+    box-shadow: 0 0 25px cornflowerblue;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Student";
+    /*color: rgb(11, 97, 28);*/
+    color: cornflowerblue;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid cornflowerblue;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 3px solid cornflowerblue;
+    }
+}
+
+@keyframes words {
+    0%, 20%{
+        content: "Software Learner";
+    }
+    21%, 40%{
+        content: "Guitarist";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5 rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+.sectionstitle{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.sectionstitle h1{
+    font-size: 30px;
+    color: cornflowerblue;
+    font-weight: 600;
+}
+
+.school-container{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.school-name{
+    color: white;
+    font-size: 15px;
+    /*border: 2px solid;
+    padding: 20px 20px 70px;
+    border-color: cornflowerblue;
+    background-color: cornflowerblue;
+    transition: 0.5 linear;
+    cursor: pointer;*/
+}
+
+/*.school-name ul li:hover{
+    box-shadow: 0 0 25px cornflowerblue;
+}*/
